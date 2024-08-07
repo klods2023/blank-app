@@ -1,11 +1,13 @@
 import streamlit as st
 
-# Создаем несколько кнопок
-if st.button('Нажми меня!'):
-    st.write('Кнопка 1 нажата!')
+# Создаем форму регистрации
+name = st.text_input('Введите ваше имя', '')
+email = st.text_input('Введите ваш email', '')
+password = st.text_input('Введите пароль', type='password')
+confirm_password = st.text_input('Подтвердите пароль', type='password')
 
-if st.button('И я тоже!'):
-    st.write('Кнопка 2 нажата!')
-
-if st.button('Нажми и меня!'):
-    st.write('Кнопка 3 нажата!')
+if st.button('Зарегистрироваться'):
+    if password == confirm_password:
+        st.write(f'Регистрация прошла успешно! Добро пожаловать, {name}!')
+    else:
+        st.write('Пароли не совпадают. Попробуйте еще раз.')
