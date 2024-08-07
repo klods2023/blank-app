@@ -1,7 +1,11 @@
 import streamlit as st
 
-st.title("🎈 My new app")
-st.write(
-    "Lроопроet's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+# Создаем несколько кнопок
+if st.button('Нажми меня!'):
+    st.write('Кнопка 1 нажата!')
 
+if st.button('И я тоже!'):
+    st.write('Кнопка 2 нажата!')
+
+if st.button('Нажми и меня!'):
+    st.write('Кнопка 3 нажата!')
