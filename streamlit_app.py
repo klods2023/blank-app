@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_login_auth_ui.widgets import __login__
 
 # Создаем форму регистрации
 name = st.text_input('Введите ваше имя', '')
@@ -13,8 +14,7 @@ if st.button('Зарегистрироваться'):
         st.write('Пароли не совпадают. Попробуйте еще раз.')
 
 
-import streamlit as st
-from streamlit_login_auth_ui.widgets import __login__
+
 
 __login__obj = __login__(auth_token = "courier_auth_token", 
                     company_name = "Shims",
